@@ -11,7 +11,6 @@ from resources import views
 router = routers.DefaultRouter()
 
 router.register(r"people", views.PeopleViewSet)
-router.register(r"planets", views.PlanetViewSet)
 router.register(r"films", views.FilmViewSet)
 router.register(r"species", views.SpeciesViewSet)
 router.register(r"vehicles", views.VehicleViewSet)
@@ -26,7 +25,6 @@ urlpatterns = patterns("",
     url(r"^stats$", "swapi.views.stats"),
     url(r"^stripe/donation", "swapi.views.stripe_donation"),
     url(r"^api/people/schema$", "resources.schemas.people"),
-    url(r"^api/planets/schema$", "resources.schemas.planets"),
     url(r"^api/films/schema$", "resources.schemas.films"),
     url(r"^api/species/schema$", "resources.schemas.species"),
     url(r"^api/vehicles/schema$", "resources.schemas.vehicles"),

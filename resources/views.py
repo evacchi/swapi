@@ -33,20 +33,6 @@ class PeopleViewSet(viewsets.ReadOnlyModelViewSet):
     def list(self, request, *args, **kwargs):
         return super(PeopleViewSet, self).list(request, *args, **kwargs)
 
-
-class PlanetViewSet(viewsets.ReadOnlyModelViewSet):
-
-    queryset = Planet.objects.all()
-    serializer_class = PlanetSerializer
-    search_fields = ('name',)
-
-    def retrieve(self, request, *args, **kwargs):
-        return super(PlanetViewSet, self).retrieve(request, *args, **kwargs)
-
-    def list(self, request, *args, **kwargs):
-        return super(PlanetViewSet, self).list(request, *args, **kwargs)
-
-
 class FilmViewSet(viewsets.ReadOnlyModelViewSet):
 
     queryset = Film.objects.all()
